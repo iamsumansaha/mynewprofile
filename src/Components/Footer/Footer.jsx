@@ -30,13 +30,13 @@ const Footer = () => {
         <h2>Social Media</h2>
         
         <div className="i-icons"> 
-          <a href="">
+          <a href="https://github.com/iamsumansaha">
             <img src={Github} alt="" />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/nwlite/in/iamsumansaha">
             <img src={LinkedIn} alt="" />
           </a>
-          <a href="">
+          <a href="https://instagram.com/its_sumansaha_/">
             {" "}
             <img src={Instagram} alt="" />
           </a>
