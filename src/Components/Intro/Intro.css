@@ -95,9 +95,10 @@ cursor: pointer;
     left: -3rem;
 }
 .i-right>:nth-child(3){
-    transform: scale(1.3);
+   transform: scale(1.6);
     height: 79%;
-    left: 20%;
+    left: 19%;
+    top: -10%;
 }
 
 
