@@ -29,7 +29,7 @@ grabCursor={true}
 className='portfolio-slider'
 >
     <SwiperSlide>
-        <a href=""><img src={myPortfolio} alt="" /></a>
+        <a href="https://github.com/iamsumansaha/mynewprofile/"><img src={myPortfolio} alt="" /></a>
     </SwiperSlide>
     <SwiperSlide>
         <a href="https://real-state-react-app.netlify.app/"><img src={Realstate} alt="Real state" /></a>
