@@ -4,11 +4,37 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { themeContext } from '../../Context';
 import { useContext } from 'react';
-import Hii from '../../img/hiboy.webp'
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Hii from '../../img/hiboy.webp';
+import Hi from '../../img/hi.webp'
+
 
 const Contact = () => {
-    const transition = {duration : 2, type : 'spring'}
+    const Animation = { 
+        form:{
+            initial:{
+                x : '-100%',
+                opacity: 0,
+            },
+            whileInView:{
+                x : 0,
+                opacity: 1,
+            }
+        },
+        button:{
+            initial:{
+                y : '-100%',
+                opacity: 0,
+            },
+            whileInView:{
+                y: 0,
+                opacity: 1,
+            },
+            transition:{
+                delay: 1, 
+            }
+        }
+       };
     const theme =useContext(themeContext);
     const darkMode = theme.state.darkMode;
     const form = useRef();
@@ -29,19 +55,20 @@ const Contact = () => {
 
 
   return (
-<div className="contact-form" id='Contact'>
+<div className="contact-form" id='Contact'
+style={{
+    background : darkMode? 'black': '',
+  }}>
 <div className="w-left">
 
-    <motion.div 
-    initial={{left: '-30%' ,opacity: 0}}
-    whileInView={{left: '10%', opacity: 1}}
-    transition={transition}
-    className="awesome">
-        <span style={{color: darkMode? 'white' : ''}}>Contact Me</span>
+    <div
+    className="awesome2">
+        <span>Contact Me</span>
+        <img src={Hi} alt="" />
             <img
             src={Hii} alt="" style={{width: '50%'}}
             />
-    </motion.div>
+    </div>
     
 
     
@@ -49,14 +76,11 @@ const Contact = () => {
 
 <div className="c-right">
     <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name='user_name' className='user' placeholder='Name' />
-        <input type="email" name='user_email' className='user' placeholder='E-mail' />
-        <textarea name="message" className="user" placeholder='Message'></textarea>
-        <input type="submit" value="send" className='button'/>
+        <motion.input {...Animation.form} type="text" name='user_name' required className='user' placeholder='Name' />
+        <motion.input {...Animation.form}  type="email" name='user_email' required className='user' placeholder='E-mail' />
+        <motion.textarea {...Animation.form} name="message" className="user" re placeholder='Message'></motion.textarea>
+        <motion.input {...Animation.button} type="submit" value="send" className='button'/>
         <span>{done && "Thanks for contacing Me!!!"}</span>
-       
-        <div className="blur c-blur"
-        style={{background: "var(--purple)"}}></div>
     </form>
 </div>
 

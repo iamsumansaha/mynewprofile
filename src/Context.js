@@ -21,4 +21,4 @@ export const ThemeProvider = (props) =>{
             {props.children}
         </themeContext.Provider>
     )
-}
+};

@@ -2,12 +2,15 @@ import React from 'react';
 import './Navbar.css';
 import Toggle from '../Toggle/Toggle'
 import { Link } from 'react-scroll'
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
 
 const Navbar = () => {
+   
   return (
     <div className="n-wrapper" id='Navbar'>
         <div className="n-left">
-            <div className="n-name">Suman.</div>
+            <div className="n-name">Suman...</div>
             <Toggle/>
         </div>
         <div className="n-right">
@@ -19,6 +22,10 @@ const Navbar = () => {
 
                     <Link spy={true} to='Skill' smooth={true}>
                     <li>SKILLs</li>
+                    </Link>
+
+                    <Link spy={true} to='education' smooth={true}>
+                    <li>Qualification</li>
                     </Link>
 
                     <Link spy={true} to='Portfolio' smooth={true}>

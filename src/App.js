@@ -7,6 +7,7 @@ import Contact from "./Components/Contact/Contact";
 import {themeContext} from './Context'
 import { useContext } from "react";
 import Footer from "./Components/Footer/Footer";
+import Education from "./Components/Education/Education";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Navbar/>
       <Intro/>
       <Services/>
+      <Education/>
       <Portfolio/>
       <Contact/>
       <Footer/>

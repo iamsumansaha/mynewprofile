@@ -1,30 +1,27 @@
 .footer{ 
-    /* height: 25vh; */
     width: 100%;
-    min-height: 50px;
-    /* background-color: var(--black); */
+    height: 60vh;
+    min-height: 100px;
     padding: 6rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;;
     align-items: center;
     justify-items: center;
     text-align: center;
+    background: linear-gradient(184deg, #ffe3e3 75%, #010c4e 20%);
     
 }
 .l-footer{
     width: 100%;
     padding: 0 0 0 0%;
-    /* border-left: 20px;
-    border-right: 20px; */
 }
 .l-footer>img{
     width: 170px;
     height: 200px;
-    /* border-radius: 90px; */
     object-fit: contain;    
     padding: 0 100px;
-    border-left: 2px solid var(--orange);
-    border-right: 2px solid var(--orange);
+    border-left: 2px solid var(--brown);
+    border-right: 2px solid var(--brown);
 
 }
 .name>h2{
@@ -48,38 +45,29 @@
     color: var(--orange);
     font-weight: bold;
     font-size: 1.5rem;
-    margin: 10px 0 0 0;
+    margin: 0px 0 20px 0;;
     padding-top: 120px;
 }
 .r-footer .i-icons{
-    margin: -15px 0 0 0;
+    margin: 8px 0px 4px 0;
 }
-.footer .r-footer .blur-2{
-    position: absolute;
-    width: 22rem;
-    height: 14rem;
-    border-radius: 50%;
-    background: #edd0ff;
-    z-index: -9;
-    filter: blur(72px);
-    left: 65%;
+
+.i-icons>*{
+    transform: scale(2.5);
+    color: var(--brown);
+    margin: 5px 30px 0px 30px;
 }
-/* .footer .blue-blur{
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #1977dd;
-    z-index: 1;
-    filter: blur(72px);
-    left: -50%
-} */
-/* .s-blur2{
-    height: 20px;
-    width: 20px;
-    left: 10rem;
-    top: 0rem;
-} */
+.i-icons>*:hover{
+    cursor: pointer;
+    color: var(--lightblue);
+    transform: scale(3.0);
+}
+
+
+
+
+    
+
 @media screen and (max-width:480px) {
     .blur-2{
         display: none;
@@ -88,6 +76,8 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
+        height: 69vh;
+        background: linear-gradient(184deg, #ffe3e3 75%, #010c4e 20%);
     }
     .l-footer>img{
         padding: 0px 30px 0 30px;
@@ -95,5 +85,8 @@
     .r-footer{
         margin-top: -30px 0 0 px;
         padding-left: 20px;
+    }
+    .footer .i-icons>*{
+        color: aliceblue;
     }
 }

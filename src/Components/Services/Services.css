@@ -1,12 +1,13 @@
 .services{
-    padding: 0 3rem 0 3rem;
+   
     display: flex;
-    height: 90vh;
+    height: 114vh;
     margin-top: 9rem;
     margin-bottom: 13rem;
-
+    background: rgb(255, 255, 255);
 }
 .awesome{
+    margin: 0 3.5rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -26,15 +27,72 @@
     color: var(--gray);
     font-size: 14px;
     margin-top: 1rem;
+  
 }
-.s-button{
+/* DOWNLOAD-BUTTON */
+/* .s-button{
     width: 8rem;
-    height: 2rem;
+    height: 1rem;
     margin-top: 1rem;
+    cursor: pointer; */
+    /* animation: zoominout 1s linear infinite alternate; */
+   
+
+.s-button{
+   
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 11px 26px 11px 26px;
+    background: linear-gradient(180deg, #ff4a08 26.71%, #b85050 99%);
+    box-shadow: 0px 8px 24px 1px #db242490;
+  }
+  
+  
+  .s-button:hover{
+    background: white;
+    cursor: pointer;
+    color: #010c4e;
+    border: 1px solid #970404;
+    box-shadow: 0 0 1px 2px #ff1e1eb7;
+    transform: scale(1.1);
+  
+
 }
+/* .s-button.active{
+    height: 20px;
+    width: 500px;
+
+}
+.s-button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    border-radius: 55px;
+    background: #21004d;
+}
+.s-button.active::before{
+    animation: layer 6s ease-in-out forwards ;
+} */
+
+
+
+
+
+
+
+
+
+
 .cards{
+    
     position: relative;
-    width: 50%;
+    width: 45%;
+    border-right: 5px solid var(--lightblue)
     
 }
 .cards>*{
@@ -44,32 +102,36 @@
 .cards:nth-child(1){
     margin-top: -10px;
 }
-.s-blur2{
-    left: 34rem;
-    top: 8rem;
-}
-.s-blur1{
-    top: 26rem;
-    left: -6rem;
-}
 
-
+/* @keyframes zoominout {
+    to{
+        transform: scale(1.2);
+    }
+    
+} */
 
 
 @media screen and (max-width: 480px) {
     .services{
         margin-top: 0;
         flex-direction: column;
-        gap: 5rem;
         height: 50rem;
-        padding: 0;
+        padding: 0rem 1rem;
+        background: none;
+        gap: 11rem;
+        >.awesome{
+            left: -6%;
+        }
     }
     .cards{
         display: flex;
         flex-direction: column;
-        gap: 17rem;
+        gap: 15rem;
+        border: none;
+       
     }
     .cards>*{
         position: static;
+       
     }
 }
