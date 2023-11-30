@@ -49,7 +49,7 @@
     padding-top: 120px;
 }
 .r-footer .i-icons{
-    margin: 8px 0px 4px 0;
+    margin: 8px -96px 4px 0;
 }
 
 .i-icons>*{
@@ -89,8 +89,4 @@
     .footer .i-icons>*{
         color: aliceblue;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 53b43c8b362430a0d7a2f36d69fe699faccc7eb6
